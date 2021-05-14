@@ -1,4 +1,4 @@
-# IPFire_2.15_ShellShock
+# IPFire 2.15 Authenticated ShellShock
 
 
     Usage: IPFireShellShock.py [options]
