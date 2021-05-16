@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+# Exploit Title: IPFire 2.15 ShellShock
+# Exploit Author: (m4ud)
+
 import requests
 import base64
 import sys
